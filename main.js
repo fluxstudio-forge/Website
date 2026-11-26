@@ -32,7 +32,7 @@ copyBtn.addEventListener('click', async () => {
     copyBtn.querySelector('span').textContent = 'Copied';
     status.textContent = 'Address copied.';
   } catch {
-    status.textContent = 'Copy failed. Select the address below and copy it by hand.';
+    status.textContent = `Copy failed. Our address is ${copyBtn.dataset.email}`;
   }
   setTimeout(() => { copyBtn.querySelector('span').textContent = 'Copy address'; }, 2000);
 });
